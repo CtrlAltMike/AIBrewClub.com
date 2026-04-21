@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found — AIBrew.club</title>
+<meta name="description" content="The requested AIBrew.club page could not be found.">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .not-found {
+    min-height: calc(100vh - 138px);
+    display: grid;
+    align-items: center;
+  }
+
+  .not-found-card {
+    max-width: 680px;
+    position: relative;
+  }
+
+  .not-found-code {
+    font-family: var(--hand);
+    color: var(--blue);
+    font-size: clamp(3rem, 13vw, 7rem);
+    line-height: 0.9;
+    margin-bottom: 1rem;
+    transform: rotate(-1.5deg);
+    display: inline-block;
+  }
+
+  .not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo-mark">AIBrew<span class="dot">.</span>club</a>
+  <ul>
+    <li><a href="/events/">Events</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/join/">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="content-wrap not-found">
+  <section class="not-found-card">
+    <span class="not-found-code">404</span>
+    <h1 class="section-title">Page not found</h1>
+    <p class="section-sub">That link does not point to a current AIBrew.club page.</p>
+    <div class="prose">
+      <p>Try the homepage or check the events page for the latest Mercer Island meetup details.</p>
+    </div>
+    <div class="not-found-actions">
+      <a href="/" class="btn">Go home</a>
+      <a href="/events/" class="btn-outline">See events</a>
+      <a href="/join/" class="btn-outline">Contact</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>AIBrew.club · Mercer Island · 2026</span>
+  <span><a href="/join/">Contact</a></span>
+</footer>
+
+</body>
+</html>
