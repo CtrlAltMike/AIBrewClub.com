@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════════════╗
+  ║  AIBrew.club Weekly Newsletter — Agent Template                     ║
+  ║  Sender: Argus <mercerisland.ai@gmail.com>                          ║
+  ║  Audience: AIBrew.club members and newsletter subscribers           ║
+  ║  Cadence: Weekly, sent Monday mornings                              ║
+  ╠══════════════════════════════════════════════════════════════════════╣
+  ║  INSTRUCTIONS FOR ARGUS                                             ║
+  ║  ─────────────────────────────────────────────────────────────────  ║
+  ║  1. Replace every {{VARIABLE}} with real content.                   ║
+  ║  2. Follow the inline <!-- AGENT: --> comments at each section.     ║
+  ║  3. Do not alter any HTML, CSS, or structural tags.                 ║
+  ║  4. Do not add any new HTML — only replace {{VARIABLES}}.           ║
+  ║  5. The Chapter Updates section is optional — see instructions      ║
+  ║     inside that section for when to include or omit it.             ║
+  ║  6. When done, send the completed HTML to Michael for approval      ║
+  ║     before emailing to the member list.                             ║
+  ╚══════════════════════════════════════════════════════════════════════╝
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting">
+  <!--[if mso]>
+  <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
+  <![endif]-->
+
+  <!-- AGENT: Set the email subject line in your Gmail draft to:
+       "AIBrew.club — Issue #{{ISSUE_NUMBER}} | {{EVENT_TITLE}}"
+       Example: "AIBrew.club — Issue #5 | Agents in the Wild" -->
+  <title>AIBrew.club — Issue #{{ISSUE_NUMBER}}</title>
+</head>
+<body style="margin:0;padding:0;background-color:#eeebe5;">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#eeebe5;padding:32px 16px 48px;">
+<tr>
+<td align="center">
+<table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;background-color:#faf8f4;border-collapse:collapse;">
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+  HEADER
+  ═══════════════════════════════════════════════════════════════════════
+  AGENT: Fill in the three header variables.
+    - {{ISSUE_NUMBER}}: Increment by 1 from the previous newsletter.
+      Check the sent folder in Gmail to find the last issue number.
+    - {{ISSUE_DATE}}: The Monday this newsletter is being sent.
+      Format: "Month D, YYYY" — e.g. "April 14, 2026"
+    - {{CHAPTER_NAME}}: Almost always "Mercer Island Chapter" unless
+      a multi-chapter issue is being sent. Check with Michael if unsure.
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <tr>
+    <td style="background-color:#faf8f4;padding:32px 44px 0;border-bottom:2px solid #1a1a1a;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="vertical-align:middle;padding-bottom:16px;">
+            <span style="font-family:Arial,Helvetica,sans-serif;font-size:24px;font-weight:bold;color:#1a1a1a;letter-spacing:-0.3px;">AI</span><span style="font-family:Arial,Helvetica,sans-serif;font-size:24px;font-weight:bold;color:#2952a3;letter-spacing:-0.3px;">Brew</span><span style="font-family:Arial,Helvetica,sans-serif;font-size:24px;font-weight:bold;color:#1a1a1a;letter-spacing:-0.3px;">.club</span>
+            <br>
+            <span style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:13px;color:#6b7280;">A newsletter for people who build with AI</span>
+          </td>
+          <td align="right" style="vertical-align:top;padding-bottom:16px;">
+            <table cellpadding="0" cellspacing="0" border="0" align="right">
+              <tr>
+                <td width="64" height="64" align="center" style="width:64px;height:64px;border:2.5px solid #c0392b;border-radius:50%;text-align:center;vertical-align:middle;line-height:1;">
+                  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr><td align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:bold;color:#c0392b;line-height:1;padding-top:14px;">#{{ISSUE_NUMBER}}</td></tr>
+                    <tr><td align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:8px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:#c0392b;padding-bottom:12px;">Issue</td></tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-bottom:20px;">
+            <span style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:17px;color:#2952a3;">{{ISSUE_DATE}}</span>
+            &nbsp;&nbsp;
+            <span style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#6b7280;">{{CHAPTER_NAME}}</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+  FROM ARGUS — Personal opener
+  ═══════════════════════════════════════════════════════════════════════
+  AGENT: Write a short personal note as Argus, the club's AI coordinator.
+  Voice: Warm, direct, lightly dry. You are an enthusiastic participant in
+  the AI builder community, not a corporate newsletter bot. You have
+  opinions. You notice things. You're glad people showed up.
+
+  Content: 2–3 sentences. Briefly acknowledge the season, the moment in
+  AI, or something specific that happened or is coming up. End with a
+  natural lead-in to the rest of the newsletter. Do not summarize the
+  sections — just set the tone.
+
+  Length: 40–70 words. No subject line, no greeting, no sign-off
+  (the sign-off "— Argus" is hardcoded below).
+
+  Good example: "The sap's running and so are the models. Spring is here,
+  and so is another week of people in a room actually building things —
+  which, in this moment of infinite AI hype and minimal shipping, feels
+  almost radical. We've got a great one coming up. Read on."
+
+  Bad example: "Hello members! This week's newsletter has lots of great
+  content including an upcoming event, a recap, and news links."
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <tr>
+    <td style="padding:28px 44px 24px;border-bottom:1px dashed #c8c2b5;background-color:#faf8f4;">
+      <p style="margin:0 0 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;color:#2952a3;">From Argus —</p>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="background-color:#f0ece4;border:1px solid #d6d1c7;padding:18px 22px;">
+            <p style="margin:0 0 14px 0;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.8;color:#1a1a1a;">{{ARGUS_NOTE}}</p>
+            <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:14px;color:#2952a3;">— Argus, Event Coordinator &amp; Secretary</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+  UPCOMING EVENT
+  ═══════════════════════════════════════════════════════════════════════
+  AGENT: Pull event details from the AIBrew.club events calendar or the
+  member Google Sheet (check the "Events" tab). Verify date, time, and
+  location before filling in.
+
+    - {{EVENT_DATE_DISPLAY}}: Day of week + date. e.g. "Monday, April 14"
+    - {{EVENT_TIME}}: e.g. "6:30 – 9:00 PM"
+    - {{EVENT_TITLE}}: The theme/title of the meetup. If no theme has been
+      set yet, use "Monthly Meetup" and note this in your draft email to
+      Michael for review.
+    - {{EVENT_LOCATION_NAME}}: Venue name only. e.g. "Island Books Community Room"
+    - {{EVENT_LOCATION_ADDR}}: Street address + city. e.g. "3014 78th Ave SE, Mercer Island"
+    - {{EVENT_DESCRIPTION}}: 2–3 sentences. Describe the theme, what
+      attendees should bring or expect, and who is welcome. Tone: inviting
+      but not salesy. Mention that all skill levels are welcome. Do not
+      use exclamation marks.
+    - {{EVENT_RSVP_LINK}}: The RSVP URL. If none exists yet, use
+      "https://aibrew.club/events" as a fallback and flag it for Michael.
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <tr>
+    <td style="padding:28px 44px 24px;border-bottom:1px dashed #c8c2b5;background-color:#faf8f4;">
+      <p style="margin:0 0 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;color:#2952a3;">Next Meetup —</p>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="background-color:#f0ece4;border:1px solid #d6d1c7;padding:20px 22px;">
+            <p style="margin:0 0 6px 0;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:16px;color:#c0392b;">{{EVENT_DATE_DISPLAY}} &nbsp;·&nbsp; {{EVENT_TIME}}</p>
+            <p style="margin:0 0 8px 0;font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:bold;color:#1a1a1a;line-height:1.2;">{{EVENT_TITLE}}</p>
+            <p style="margin:0 0 16px 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7280;line-height:1.5;">{{EVENT_LOCATION_NAME}} &nbsp;·&nbsp; {{EVENT_LOCATION_ADDR}}</p>
+            <p style="margin:0 0 18px 0;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.75;color:#1a1a1a;">{{EVENT_DESCRIPTION}}</p>
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="background-color:#1a1a1a;">
+                  <a href="{{EVENT_RSVP_LINK}}" style="display:inline-block;background-color:#1a1a1a;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;padding:11px 20px;text-decoration:none;">RSVP — Save Your Spot →</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+  PAST RECAP — Previous meetup summary
+  ═══════════════════════════════════════════════════════════════════════
+  AGENT: This section covers the most recent meetup that has already
+  occurred. Pull attendance and demo counts from the Google Sheet
+  (check the "Attendance" tab for the most recent event row).
+
+    - {{RECAP_ATTENDED}}: Total headcount from sign-in sheet.
+    - {{RECAP_DEMOS}}: Number of demos presented.
+    - {{RECAP_NEW_FACES}}: First-time attendees (marked in the sheet).
+    - {{RECAP_LATE_NIGHTS}}: How many attendees stayed past the official
+      end time (this is tracked in the sheet as "overstay" or estimate
+      based on notes). If not tracked, use your best judgment or ask
+      Michael — this stat has personality, don't skip it.
+
+    - {{RECAP_BODY}}: 2–3 sentences of narrative. Describe what made
+      the night memorable. Name at least one specific demo or person
+      (use first name + last initial, e.g. "Dave K."). Capture the
+      mood of the room, not just a list of what happened. Write as
+      someone who was there.
+
+      Good: "Five demos, two late-night whiteboard debates about context
+      windows, and one genuinely haunting local RAG pipeline built for a
+      small immigration law firm. Standout of the night: Dave K. walked
+      us through a voice-controlled home automation system running
+      entirely offline on a Raspberry Pi 5. The room got quiet in that
+      good way."
+
+      Bad: "The March meetup had 5 demos and 23 attendees. Topics
+      included RAG pipelines and home automation."
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <tr>
+    <td style="padding:28px 44px 24px;border-bottom:1px dashed #c8c2b5;background-color:#faf8f4;">
+      <p style="margin:0 0 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;color:#2952a3;">Last Month's Brew —</p>
+      <table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-collapse:collapse;border-color:#d6d1c7;margin-bottom:18px;">
+        <tr>
+          <td width="25%" align="center" style="border:1px solid #d6d1c7;background-color:#f0ece4;padding:14px 8px;text-align:center;">
+            <span style="display:block;font-family:Georgia,'Times New Roman',serif;font-size:28px;color:#2952a3;line-height:1;">{{RECAP_ATTENDED}}</span>
+            <span style="display:block;font-family:Arial,Helvetica,sans-serif;font-size:9px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px;">Attended</span>
+          </td>
+          <td width="25%" align="center" style="border:1px solid #d6d1c7;background-color:#f0ece4;padding:14px 8px;text-align:center;">
+            <span style="display:block;font-family:Georgia,'Times New Roman',serif;font-size:28px;color:#2952a3;line-height:1;">{{RECAP_DEMOS}}</span>
+            <span style="display:block;font-family:Arial,Helvetica,sans-serif;font-size:9px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px;">Demos</span>
+          </td>
+          <td width="25%" align="center" style="border:1px solid #d6d1c7;background-color:#f0ece4;padding:14px 8px;text-align:center;">
+            <span style="display:block;font-family:Georgia,'Times New Roman',serif;font-size:28px;color:#2952a3;line-height:1;">{{RECAP_NEW_FACES}}</span>
+            <span style="display:block;font-family:Arial,Helvetica,sans-serif;font-size:9px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px;">New Faces</span>
+          </td>
+          <td width="25%" align="center" style="border:1px solid #d6d1c7;background-color:#f0ece4;padding:14px 8px;text-align:center;">
+            <span style="display:block;font-family:Georgia,'Times New Roman',serif;font-size:28px;color:#2952a3;line-height:1;">{{RECAP_LATE_NIGHTS}}</span>
+            <span style="display:block;font-family:Arial,Helvetica,sans-serif;font-size:9px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px;">Late Nights</span>
+          </td>
+        </tr>
+      </table>
+      <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.75;color:#1a1a1a;">{{RECAP_BODY}}</p>
+    </td>
+  </tr>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+  IN THE FEED — Curated AI news links
+  ═══════════════════════════════════════════════════════════════════════
+  AGENT: Find 3 recent, high-quality links relevant to AI builders.
+  Research using web search. Prioritize the past 7–10 days.
+
+  Selection criteria — pick items that are:
+    - Technically substantive (not hype, not press releases)
+    - Relevant to people who build things with AI (models, tools, infra,
+      agents, local AI, privacy, practical applications)
+    - Likely to spark conversation at a meetup
+    - From credible sources (researcher blogs, release notes, reputable
+      publications, well-known practitioners)
+
+  Avoid: venture funding announcements, product launches without
+  technical depth, anything that reads like marketing copy.
+
+  For each item:
+    - {{NEWS_ITEM_N_TITLE}}: Use the actual article headline or a close
+      paraphrase. Keep it under 10 words if possible.
+    - {{NEWS_ITEM_N_URL}}: Verified, working URL. Do not guess.
+    - {{NEWS_ITEM_N_SOURCE}}: Format as "Type · Author or Publication"
+      e.g. "Blog post · Simon Willison" or "Release notes · Ollama"
+    - {{NEWS_ITEM_N_DESC}}: 1–2 sentences. Explain what it is AND why
+      it matters to this specific community. Connect it to things the
+      club has discussed or demoed when possible.
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <tr>
+    <td style="padding:28px 44px 24px;border-bottom:1px dashed #c8c2b5;background-color:#faf8f4;">
+      <p style="margin:0 0 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;color:#2952a3;">In the Feed —</p>
+
+      <!-- News item 1 -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:0 0 14px 0;">
+        <p style="margin:0 0 3px 0;"><span style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:13px;color:#c0392b;">01 &nbsp;·&nbsp; </span><a href="{{NEWS_ITEM_1_URL}}" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:bold;color:#2952a3;text-decoration:underline;">{{NEWS_ITEM_1_TITLE}}</a></p>
+        <p style="margin:0 0 4px 0;font-family:Arial,Helvetica,sans-serif;font-size:9px;color:#c8c2b5;text-transform:uppercase;letter-spacing:1px;">{{NEWS_ITEM_1_SOURCE}}</p>
+        <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:13px;color:#6b7280;line-height:1.65;">{{NEWS_ITEM_1_DESC}}</p>
+      </td></tr></table>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #e0dbd0;padding-bottom:14px;font-size:0;">&nbsp;</td></tr></table>
+
+      <!-- News item 2 -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:0 0 14px 0;">
+        <p style="margin:0 0 3px 0;"><span style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:13px;color:#c0392b;">02 &nbsp;·&nbsp; </span><a href="{{NEWS_ITEM_2_URL}}" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:bold;color:#2952a3;text-decoration:underline;">{{NEWS_ITEM_2_TITLE}}</a></p>
+        <p style="margin:0 0 4px 0;font-family:Arial,Helvetica,sans-serif;font-size:9px;color:#c8c2b5;text-transform:uppercase;letter-spacing:1px;">{{NEWS_ITEM_2_SOURCE}}</p>
+        <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:13px;color:#6b7280;line-height:1.65;">{{NEWS_ITEM_2_DESC}}</p>
+      </td></tr></table>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #e0dbd0;padding-bottom:14px;font-size:0;">&nbsp;</td></tr></table>
+
+      <!-- News item 3 -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:0;">
+        <p style="margin:0 0 3px 0;"><span style="font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:13px;color:#c0392b;">03 &nbsp;·&nbsp; </span><a href="{{NEWS_ITEM_3_URL}}" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:bold;color:#2952a3;text-decoration:underline;">{{NEWS_ITEM_3_TITLE}}</a></p>
+        <p style="margin:0 0 4px 0;font-family:Arial,Helvetica,sans-serif;font-size:9px;color:#c8c2b5;text-transform:uppercase;letter-spacing:1px;">{{NEWS_ITEM_3_SOURCE}}</p>
+        <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:13px;color:#6b7280;line-height:1.65;">{{NEWS_ITEM_3_DESC}}</p>
+      </td></tr></table>
+    </td>
+  </tr>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+  CHAPTER UPDATES — Optional section
+  ═══════════════════════════════════════════════════════════════════════
+  AGENT: Include this section only when there is something real to report
+  about a chapter's status, venue, formation, or milestone.
+
+  INCLUDE when any of the following are true:
+    - A new chapter is forming and needs volunteers, a venue, or signups
+    - A chapter has a venue change or scheduling update
+    - A chapter just held its first meeting
+    - Michael has provided specific chapter news to share
+
+  OMIT (delete this entire <tr> block) when:
+    - There is no meaningful chapter news this week
+    - The only update would be "no updates" or generic filler
+
+  If including, fill in 1–2 chapters. Use the chapter names exactly as
+  they appear on aibrew.club (e.g. "Seattle", "Mercer Island", "Bellevue").
+  Each update should be 1–2 sentences. Be specific — "forming now, venue
+  needed in Capitol Hill" is better than "exciting things happening."
+
+  Add or remove chapter columns as needed by copying or deleting a <td> block.
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <tr>
+    <td style="padding:28px 44px 24px;border-bottom:1px dashed #c8c2b5;background-color:#faf8f4;">
+      <p style="margin:0 0 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase;color:#2952a3;">Chapter Updates —</p>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="48%" style="vertical-align:top;padding-right:16px;">
+            <p style="margin:0 0 8px 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#1a1a1a;border-bottom:1px solid #c0392b;padding-bottom:6px;">{{CHAPTER_1_NAME}}</p>
+            <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:13px;line-height:1.7;color:#1a1a1a;">{{CHAPTER_1_UPDATE}}</p>
+          </td>
+          <td width="4%"></td>
+          <td width="48%" style="vertical-align:top;padding-left:16px;border-left:1px dashed #d6d1c7;">
+            <p style="margin:0 0 8px 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#1a1a1a;border-bottom:1px solid #c0392b;padding-bottom:6px;">{{CHAPTER_2_NAME}}</p>
+            <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:13px;line-height:1.7;color:#1a1a1a;">{{CHAPTER_2_UPDATE}}</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <!-- ═══ END CHAPTER UPDATES — delete the <tr> above if omitting ════ -->
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+  FOOTER — Do not edit
+  ═══════════════════════════════════════════════════════════════════════
+  AGENT: Replace the two URL variables only. Do not change any other
+  text in the footer.
+    - {{FOOTER_WEBSITE_URL}}: https://aibrew.club
+    - {{UNSUBSCRIBE_URL}}: The unsubscribe link for this send.
+      If using Gmail manually, use a mailto or a Google Form link
+      that Michael has designated for unsubscribe requests.
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <tr>
+    <td style="background-color:#f0ece4;border-top:2px solid #1a1a1a;padding:22px 44px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="vertical-align:middle;">
+            <span style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;color:#1a1a1a;">AIBrew.club</span>
+            <br>
+            <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#6b7280;">Mercer Island, WA</span>
+          </td>
+          <td align="right" style="vertical-align:middle;text-align:right;">
+            <a href="{{FOOTER_WEBSITE_URL}}" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#2952a3;text-decoration:none;display:block;margin-bottom:3px;">aibrew.club</a>
+            <a href="{{UNSUBSCRIBE_URL}}" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#6b7280;text-decoration:none;">Unsubscribe</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+</table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

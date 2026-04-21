@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIBrew.club Newsletter — V2: The Paper</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #c8c2b5;
+      padding: 48px 20px;
+    }
+    .preview-label {
+      text-align: center;
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+    .email-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #faf8f4;
+      box-shadow: 2px 4px 20px rgba(0,0,0,0.15), -1px -1px 0 rgba(0,0,0,0.05);
+    }
+
+    /* ── Header ─────────────────────────────────── */
+    .header {
+      background: #faf8f4;
+      padding: 36px 48px 28px;
+      border-bottom: 2px solid #1a1a1a;
+      position: relative;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+    .header-wordmark {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.5px;
+    }
+    .header-wordmark span {
+      color: #2952a3;
+    }
+    .stamp {
+      width: 62px;
+      height: 62px;
+      border: 2.5px solid #c0392b;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(12deg);
+      flex-shrink: 0;
+    }
+    .stamp-num {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #c0392b;
+      line-height: 1;
+    }
+    .stamp-label {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #c0392b;
+    }
+    .header-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .header-date {
+      font-family: 'Caveat', cursive;
+      font-size: 18px;
+      color: #2952a3;
+    }
+    .header-chapter {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #6b7280;
+    }
+
+    /* ── Section Labels ──────────────────────────── */
+    .section-wrap {
+      padding: 0 48px;
+    }
+    .section {
+      padding: 26px 0;
+      border-bottom: 1px dashed #c8c2b5;
+    }
+    .section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      font-family: 'Caveat', cursive;
+      font-size: 19px;
+      font-weight: 700;
+      color: #2952a3;
+      margin-bottom: 14px;
+    }
+
+    /* ── Argus Note ──────────────────────────────── */
+    .argus-note-box {
+      background: #f0ece4;
+      border: 1px solid #d6d1c7;
+      padding: 20px 24px;
+      position: relative;
+    }
+    .argus-tape {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-1deg);
+      width: 60px;
+      height: 18px;
+      background: rgba(255, 235, 150, 0.75);
+      border-left: 1px solid rgba(180,165,100,0.3);
+      border-right: 1px solid rgba(180,165,100,0.3);
+    }
+    .argus-text {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #1a1a1a;
+      margin-bottom: 14px;
+    }
+    .argus-sig {
+      font-family: 'Caveat', cursive;
+      font-size: 17px;
+      color: #2952a3;
+    }
+
+    /* ── Event ───────────────────────────────────── */
+    .event-card {
+      background: #f0ece4;
+      border: 1px solid #d6d1c7;
+      padding: 20px 22px;
+      position: relative;
+      transform: rotate(-0.2deg);
+    }
+    .event-when {
+      font-family: 'Caveat', cursive;
+      font-size: 16px;
+      color: #c0392b;
+      margin-bottom: 6px;
+    }
+    .event-title {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .event-where {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+    .body-text {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #1a1a1a;
+      margin-bottom: 14px;
+    }
+    .body-text:last-child { margin-bottom: 0; }
+    .cta-button {
+      display: inline-block;
+      border: 2px solid #1a1a1a;
+      color: #1a1a1a;
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 9px 18px;
+      text-decoration: none;
+      background: #faf8f4;
+      margin-top: 4px;
+    }
+
+    /* ── Stats ───────────────────────────────────── */
+    .stats-row {
+      display: flex;
+      gap: 8px;
+      margin: 14px 0;
+    }
+    .stat-chip {
+      border: 1px solid #d6d1c7;
+      background: #f0ece4;
+      padding: 8px 12px;
+      text-align: center;
+      flex: 1;
+    }
+    .stat-num {
+      font-family: 'Caveat', cursive;
+      font-size: 26px;
+      font-weight: 700;
+      color: #2952a3;
+      display: block;
+      line-height: 1;
+    }
+    .stat-label {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 9px;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ── News ────────────────────────────────────── */
+    .news-item {
+      padding: 13px 0;
+      border-top: 1px solid #e0dbd0;
+    }
+    .news-item:first-child { border-top: none; padding-top: 0; }
+    .news-num {
+      font-family: 'Caveat', cursive;
+      font-size: 15px;
+      color: #c0392b;
+      margin-right: 6px;
+    }
+    .news-link {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #2952a3;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-style: wavy;
+    }
+    .news-desc {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.6;
+      margin-top: 4px;
+      padding-left: 20px;
+    }
+
+    /* ── Chapter Updates ─────────────────────────── */
+    .chapter-item {
+      margin-bottom: 16px;
+    }
+    .chapter-item:last-child { margin-bottom: 0; }
+    .chapter-label {
+      font-family: 'Caveat', cursive;
+      font-size: 16px;
+      color: #c0392b;
+      margin-bottom: 4px;
+    }
+
+    /* ── Footer ──────────────────────────────────── */
+    .footer {
+      background: #f0ece4;
+      border-top: 2px solid #1a1a1a;
+      padding: 24px 48px;
+      text-align: center;
+    }
+    .footer-wordmark {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+    .footer-text {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 3px;
+      line-height: 1.6;
+    }
+    .footer-link { color: #2952a3; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="preview-label">Preview: V2 — The Paper &nbsp;·&nbsp; Open in browser to review</div>
+
+  <div class="email-wrapper">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="header-top">
+        <div>
+          <div class="header-wordmark">AI<span>Brew</span>.club</div>
+        </div>
+        <div class="stamp">
+          <div class="stamp-num">#4</div>
+          <div class="stamp-label">Issue</div>
+        </div>
+      </div>
+      <div class="header-meta-row">
+        <span class="header-date">April 7, 2026</span>
+        <span class="header-chapter">Mercer Island Chapter</span>
+      </div>
+    </div>
+
+    <div class="section-wrap">
+
+      <!-- From Argus -->
+      <div class="section">
+        <div class="section-label">From Argus —</div>
+        <div class="argus-note-box">
+          <div class="argus-tape"></div>
+          <p class="argus-text">The sap's running and so are the models. Spring is here, and so is another week of people in a room actually building things — which, in this moment of infinite AI hype and minimal shipping, feels almost radical. We've got a great one coming up April 14. Read on.</p>
+          <div class="argus-sig">— Argus, Coordinator &amp; Secretary</div>
+        </div>
+      </div>
+
+      <!-- Upcoming Event -->
+      <div class="section">
+        <div class="section-label">Next Meetup —</div>
+        <div class="event-card">
+          <div class="event-when">Monday, April 14 · 6:30 – 9:00 PM</div>
+          <div class="event-title">Agents in the Wild</div>
+          <div class="event-where">Island Books Community Room &nbsp;·&nbsp; 3014 78th Ave SE, Mercer Island</div>
+          <p class="body-text">This month's theme: autonomous agents doing actual work in the real world. Bring a demo, a disaster story, or just your questions. Lightning demos are 5 minutes; full demos get 15. All skill levels welcome.</p>
+          <a href="../events/index.html" class="cta-button">RSVP — Save Your Spot →</a>
+        </div>
+      </div>
+
+      <!-- Past Recap -->
+      <div class="section">
+        <div class="section-label">Last Month's Brew —</div>
+        <div class="stats-row">
+          <div class="stat-chip"><span class="stat-num">23</span><span class="stat-label">Attended</span></div>
+          <div class="stat-chip"><span class="stat-num">5</span><span class="stat-label">Demos</span></div>
+          <div class="stat-chip"><span class="stat-num">7</span><span class="stat-label">New Faces</span></div>
+          <div class="stat-chip"><span class="stat-num">2</span><span class="stat-label">Late Nights</span></div>
+        </div>
+        <p class="body-text">Five demos, two late-night whiteboard debates about context windows, and one genuinely haunting local RAG pipeline built for a small immigration law firm. Standout of the night: <strong>Dave K.</strong> walked us through a voice-controlled home automation system running entirely offline on a Raspberry Pi 5. The room got quiet in that good way.</p>
+      </div>
+
+      <!-- In the Feed -->
+      <div class="section">
+        <div class="section-label">In the Feed —</div>
+        <div class="news-item">
+          <div><span class="news-num">01 ·</span><span class="news-link">The Bitter Lesson, Revisited</span></div>
+          <div class="news-desc">Rich Sutton's 2019 essay is doing the rounds again. Hits differently now that scaling has clearly plateaued. Worth a slow read if you've been following the post-GPT-4 discourse.</div>
+        </div>
+        <div class="news-item">
+          <div><span class="news-num">02 ·</span><span class="news-link">Ollama 0.6 ships tool use for local models</span></div>
+          <div class="news-desc">Local-first agent workflows just got a lot more viable. Particularly relevant for anyone working on privacy-sensitive use cases — a few folks from March should see this.</div>
+        </div>
+        <div class="news-item">
+          <div><span class="news-num">03 ·</span><span class="news-link">What personal AI actually requires</span></div>
+          <div class="news-desc">Memory architecture without the vendor pitch. "What would this actually require to work well?" Directly relevant to Dave's Pi demo from last month.</div>
+        </div>
+      </div>
+
+      <!-- Chapter Updates -->
+      <div class="section">
+        <div class="section-label">Chapter Updates —</div>
+        <div class="chapter-item">
+          <div class="chapter-label">Seattle ↗</div>
+          <p class="body-text" style="margin-bottom: 0;">Forming now. If you know a venue in Capitol Hill, SLU, or Fremont that hosts evening events, please reply to this email. Target launch: June 2026.</p>
+        </div>
+        <div class="chapter-item" style="margin-top: 14px;">
+          <div class="chapter-label">Mercer Island ↗</div>
+          <p class="body-text" style="margin-bottom: 0;">We're outgrowing Island Books (a good problem). Venue leads for a permanent home wanted — bring them April 14. Capacity 30+ preferred.</p>
+        </div>
+      </div>
+
+    </div><!-- /section-wrap -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-wordmark">AIBrew.club</div>
+      <p class="footer-text">Mercer Island, WA · <a href="../index.html" class="footer-link">aibrew.club</a></p>
+      <p class="footer-text" style="margin-top: 6px;">You're receiving this because you're a member or newsletter subscriber.</p>
+      <p class="footer-text" style="margin-top: 4px;"><a href="../join/index.html" class="footer-link">Unsubscribe</a></p>
+    </div>
+
+  </div>
+</body>
+</html>
