@@ -601,7 +601,20 @@ footer a:hover { color: var(--blue); text-decoration: underline; text-decoration
    ============================================ */
 
 @media (max-width: 768px) {
-  nav ul { gap: 1.25rem; font-size: 0.78rem; letter-spacing: 0.05em; }
+  nav {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+  }
+  .logo-mark { font-size: 1.35rem; }
+  nav ul {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+  }
   .nav-dropdown > a::after { content: ' ▾'; }
 
   .two-col { grid-template-columns: 1fr; }
@@ -611,6 +624,17 @@ footer a:hover { color: var(--blue); text-decoration: underline; text-decoration
   footer { flex-direction: column; gap: 0.5rem; }
   .page-header { padding: 2rem 1.5rem 1.5rem; }
   .content-wrap { padding: 2.5rem 1.5rem; }
+  .btn,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  nav { padding: 0.85rem 0.9rem; }
+  nav ul { gap: 0.55rem 0.75rem; font-size: 0.72rem; }
 }
 
 </style>
@@ -649,6 +673,7 @@ footer a:hover { color: var(--blue); text-decoration: underline; text-decoration
     <p>The group is for people who want to understand how AI tools are being used in everyday work, learning, and small projects.</p>
     <p>You do not need to be technical. Some attendees build software. Others are simply curious and want a clear, low-pressure place to ask questions.</p>
     <p>The meetup is free. Meetings are held on Mercer Island when space is available.</p>
+    <p>AIBrew.club is maintained by local organizers who update the schedule, answer attendee questions, and handle corrections through <a href="mailto:mercerisland.ai@gmail.com?subject=AIBrew.club%20question">mercerisland.ai@gmail.com</a>.</p>
   </div>
 </section>
 

@@ -523,9 +523,20 @@ footer a:hover { color: var(--blue); text-decoration: underline; text-decoration
    ============================================ */
 
 @media (max-width: 768px) {
-  nav ul { display: none; }
-  nav ul.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 3px solid var(--ink); padding: 1rem 2rem; gap: 1rem; }
-  .nav-toggle { display: block; }
+  nav {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+  }
+  .logo-mark { font-size: 1.35rem; }
+  nav ul {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+  }
   .two-col { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: 1fr; }
   .taped-card { flex-direction: column; gap: 1rem; }
@@ -533,4 +544,15 @@ footer a:hover { color: var(--blue); text-decoration: underline; text-decoration
   footer { flex-direction: column; gap: 0.5rem; }
   .page-header { padding: 2rem 1.5rem 1.5rem; }
   .content-wrap { padding: 2.5rem 1.5rem; }
+  .btn,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  nav { padding: 0.85rem 0.9rem; }
+  nav ul { gap: 0.55rem 0.75rem; font-size: 0.72rem; }
 }

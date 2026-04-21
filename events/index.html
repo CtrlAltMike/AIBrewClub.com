@@ -601,7 +601,20 @@ footer a:hover { color: var(--blue); text-decoration: underline; text-decoration
    ============================================ */
 
 @media (max-width: 768px) {
-  nav ul { gap: 1.25rem; font-size: 0.78rem; letter-spacing: 0.05em; }
+  nav {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+  }
+  .logo-mark { font-size: 1.35rem; }
+  nav ul {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+  }
   .nav-dropdown > a::after { content: ' ▾'; }
 
   .two-col { grid-template-columns: 1fr; }
@@ -611,6 +624,17 @@ footer a:hover { color: var(--blue); text-decoration: underline; text-decoration
   footer { flex-direction: column; gap: 0.5rem; }
   .page-header { padding: 2rem 1.5rem 1.5rem; }
   .content-wrap { padding: 2.5rem 1.5rem; }
+  .btn,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  nav { padding: 0.85rem 0.9rem; }
+  nav ul { gap: 0.55rem 0.75rem; font-size: 0.72rem; }
 }
 
 </style>
@@ -763,6 +787,7 @@ footer a:hover { color: var(--blue); text-decoration: underline; text-decoration
         <h3>Next Mercer Island AI Meetup</h3>
         <div class="meta">Mercer Island Public Library · 5:30–7:00pm</div>
         <div class="desc">Informal discussion about AI tools, current projects, and practical questions from attendees.</div>
+        <div class="desc">Organized by the AIBrew.club organizers. Questions and corrections go through the contact page.</div>
       </div>
       <span class="event-status status-upcoming">Upcoming</span>
     </div>
